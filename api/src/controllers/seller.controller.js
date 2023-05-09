@@ -1,8 +1,9 @@
 import bycript from "bcryptjs"
 import jwt from "jsonwebtoken"
 import Seller from "../models/seller.model.js"
+const secret = 'deneme'
 
-export const sigin = async (req, res) => {
+export const signIn = async (req, res) => {
     const { email, password } = req.body
     try {
         const sellerClone = await Seller.findOne({ email })
@@ -20,15 +21,15 @@ export const sigin = async (req, res) => {
 
 }
 
-export const signup = async (req, res) => {
-    const { fullName, email, password } = req.body;
+export const signUp = async (req, res) => {
+    const { sellerFullName, email, password } = req.body;
     try {
         const sellerClone = await User.findOne({ email })
         if (sellerClone) res.status(400).json({ message: "User already exists" })
 
         const hashedPassword = bcrypt.hash(password, 10)
         const result = Seller.create({
-            fullName,
+            sellerFullName,
             email,
             hashedPassword,
         })

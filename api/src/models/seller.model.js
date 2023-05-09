@@ -1,19 +1,18 @@
 import mongoose from "mongoose";
 
 const sellerSchema = mongoose.Schema({
-    fullName: {
+    sellerFullName: {
         type: String,
         required: true
     },
     email: {
-        type: String, required: true,
-        unique: true
+        type: String, required: true, unique: true
     },
     password: {
         type: String,
         required: true
     },
-    company: { type: mongoose.Schema.Types.ObjectId, ref: "Company" }
+    products: [{ type: mongoose.Types.ObjectId, ref: "Product" }]
 
 })
 

@@ -4,7 +4,6 @@ import User from '../models/user.model.js'
 
 const secret = 'deneme'
 
-
 export const signin = async (req, res) => {
     const { email, password } = req.body;
     try {
@@ -23,14 +22,14 @@ export const signin = async (req, res) => {
 }
 
 export const signup = async (req, res) => {
-    const { fullName, email, password } = req.body;
+    const { userFullName, email, password } = req.body;
     try {
         const userClone = await User.findOne({ email })
         if (userClone) res.status(400).json({ message: "User already exists" })
 
         const hashedPassword = bcrypt.hash(password, 10)
         const result = User.create({
-            fullName,
+            userFullName,
             email,
             hashedPassword,
         })
@@ -40,5 +39,4 @@ export const signup = async (req, res) => {
         res.status(500).json({ message: 'Something went wrong' });
         console.log(error)
     }
-
 }
