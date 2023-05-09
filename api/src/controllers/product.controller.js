@@ -21,6 +21,7 @@ export const updateProduct = async (req, res) => {
     res.json(updatedProduct)
 }
 
+
 export const deletePost = async (req, res) => {
     const { id } = req.params
     if (!mongoose.Types.ObjectId.isValid(id)) res.status(404).json({ message: `there is no such product ${id}` })
