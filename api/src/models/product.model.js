@@ -7,7 +7,6 @@ const productSchema = mongoose.Schema({
     productSize: { type: String, require: true },
     productQuantity: { type: Number, require: true },
     productSale: { type: Number, require: true },
-
 })
 
 
