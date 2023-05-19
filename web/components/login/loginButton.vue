@@ -10,5 +10,5 @@ const { butonName } = defineProps(['butonName'])
 
 <style scoped>
 .login-button {
-    @apply text-white bg-orange-500 rounded-xl mt-3 py-2 px-3 transition-colors hover:bg-orange-600;
+    @apply text-white bg-orange-500 rounded-md mt-3 py-2 px-3 transition-colors hover:bg-orange-600 font-medium;
 }</style>

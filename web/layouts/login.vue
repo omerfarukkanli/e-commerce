@@ -1,4 +1,0 @@
-<template>
-    <LoginNavbar />
-    <NuxtPage />
-</template>

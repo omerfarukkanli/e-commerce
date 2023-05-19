@@ -1,14 +1,9 @@
-<template><div class="h-screen ">
+<template>
     <LoginCard/>
-
-</div>
 </template>
 
 
 <script setup>
-definePageMeta({
-    layout: "login"
-})
 </script> 
 
 <style scoped>
