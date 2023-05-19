@@ -11,12 +11,5 @@
 </template>
 
 <style scoped>
-.loginContainer {
-    @apply flex justify-center items-center h-screen
-}
 
-.loginCard {
-    @apply border border-solid border-gray-300 py-7 px-3 rounded-md flex flex-col w-80 text-center;
-
-}
 </style>
