@@ -4,7 +4,7 @@
         <input type="text" class="border">
         <div>
             <DefaultNavbarButton button-name="Giriş Yap" to="/auth/login" />
-            <DefaultNavbarButton button-name="Kayıt ol" />
+            <DefaultNavbarButton button-name="Kayıt ol" to="/auth/register"/>
         </div>
     </div>
 </template>
