@@ -1,14 +1,15 @@
 import mongoose from "mongoose";
 
 const sellerSchema = mongoose.Schema({
-    sellerFullName: {
-        type: String,
-        required: true
-    },
+
     email: {
         type: String, required: true, unique: true
     },
     password: {
+        type: String,
+        required: true
+    },
+    sellerName: {
         type: String,
         required: true
     },
