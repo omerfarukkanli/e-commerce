@@ -1,8 +1,6 @@
 import Seller from '../models/seller.model.js'
 import { sellerFindOne } from "../services/sellerService.js"
-import { passwordHash, passwordCompare } from "../services/bycriptService.js"
-import { jwtSign } from "../services/jwtService.js"
-
+import { passwordCompare, passwordHash, jwtSign } from "../services/tokenService.js"
 
 export const signIn = async (req, res) => {
     const { email, password } = req.body;
@@ -14,7 +12,7 @@ export const signIn = async (req, res) => {
         if (!correctPasswod) res.status(400).json({ message: "wrong password" })
 
         const token = await jwtSign({ email: userClone.email, id: userClone._id })
-        res.status(200).json({ result: userClone, token })
+        res.status(200).json({ token })
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' });
         console.log(error)

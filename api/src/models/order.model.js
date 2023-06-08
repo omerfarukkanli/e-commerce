@@ -4,7 +4,9 @@ const OrderSchema = mongoose.Schema({
     user: { type: mongoose.Types.ObjectId, ref: "User" },
     saller: { type: mongoose.Types.ObjectId, ref: "Seller" },
     products: [{ type: mongoose.Types.ObjectId, ref: "Product" }],
-    date: { default: Date.now() }//created updated 
+    createdDate: { default: Date.now() },
+    updatedDate: { default: Date.now() }//created updated 
+    //created updated 
 })
 
 export default mongoose.model("Order", OrderSchema)
