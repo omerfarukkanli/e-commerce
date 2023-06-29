@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.authpageCenter {
+    @apply flex items-center justify-center h-screen flex-col
+}
+.authPageCard{
+    @apply flex flex-col w-72 border border-gray-300 items-center h-3/5 bg-white
+}body{
+    @apply bg-zinc-100
+}

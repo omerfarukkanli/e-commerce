@@ -18,6 +18,6 @@ const handleClicked = () => {
 
 <style scoped>
 .login-button {
-    @apply bg-orange-500 text-white py-2 rounded-2xl font-bold hover:bg-orange-600
+    @apply bg-orange-500 text-white py-2 rounded-2xl font-bold hover:bg-orange-600 w-64
 }
 </style>
